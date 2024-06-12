@@ -1,7 +1,7 @@
 ---
 title: '[Text Analysis]{style="color:darkblue"}<br>for<br>[Clinical Research]{style="color:darkorange;"}'
 subtitle: '**Our current experiences at** [**UBEP**]{style="color:blue;"}'
-author: '**[IT]{style="color:green;"}[A]{style="color:white;border-color:black"}[LY]{style="color:red;"}/[UniPD]{style="color:darkred;"}/[D]{style="color:white;background-color:red"}[S]{style="color:blue;background-color:red"}[CTVPH]{style="color:white;background-color:red"}/[UBEP]{style="color:blue;"}/[LAIMS]{style="color:darkorange;"}/CorradoLanera[.]{style="color:darkorange;"}phd**'
+author: '**[IT]{style="color:green;"}[A]{style="color:white;border-color:black;background-color:lightgray"}[LY]{style="color:red;"}/[UniPD]{style="color:darkred;"}/[D]{style="color:white;background-color:red"}[S]{style="color:blue;background-color:red"}[CTVPH]{style="color:white;background-color:red"}/[UBEP]{style="color:blue;"}/[LAIMS]{style="color:darkorange;"}/CorradoLanera[.]{style="color:darkorange;"}phd**'
 format:
   revealjs:
     embed-resources: true
@@ -26,13 +26,13 @@ nocite: |
   @*
 ---
 
-## Modern [Tools]{style="color:darkorange;"} for Text Analysis
+## [Tools]{style="color:darkorange;"} for Text Analysis
 
 ::: columns
 ::: {.column width="50%"}
 ### Neural Network
 
-![](img/mlp.png){fig-align="center"}
+![](img/mlp.png){fig-align="center" width="90%"}
 
 ### RNN
 
@@ -46,46 +46,45 @@ nocite: |
 :::
 :::
 
-## Modern [Applications]{style="color:darkorange;"} for Text Analysis
+## [Applications]{style="color:darkorange;"} for Text Analysis
 
 ### (L)LM
 
 ![](img/transformer_decoding_2.gif){fig-align="center"}
 
-
-## Modern [Opportunities]{style="color:darkorange;"} for Text Analysis
+## [Opportunities]{style="color:darkorange;"} for Text Analysis
 
 ![](img/LLM-use-cases.png){fig-align="center"}
 
-## Modern [UBEP]{style="color:blue;"} on Text Analysis
+## [UBEP]{style="color:blue;"} on Text Analysis
 
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| Project                 | Data               | Records      | Tool              | [Test]{style="color:darkorange;"} |
-+=========================+====================+==============+===================+===================================+
-| Extending SRs           | citations          | 7494 (14 SR) | RF/SVM            | 0.934-0.999\                      |
-|                         |                    |              |                   | (AUC-ROC)                         |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| VZV detection           | Pediatrician\      | 60659        | RNN               | 0.953\                            |
-|                         | free-text notes    |              |                   | (AUC-ROC)                         |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| Otitis Classification   | Pediatrician\      | 297673       | RNN               | 0.955\                            |
-|                         | free-text notes    |              |                   | (Balance F1)                      |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| Injuries Classification | ED discharge\      | 8194         | GPT-4             | 99.5-1.0\                         |
-|                         | free-text notes    |              |                   | (Accuracy)                        |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| SR Screening            | citations          | 3080         | Humans + ASReview | 0.96-0.98\                        |
-|                         |                    |              |                   | (AUC-ROC)                         |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| SR Screening            | citations          | 24931        | GPT-4o            | fine-tuning                       |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| SR Screening            | citations          | 535          | GPT-4o            | developing                        |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
-| Classification,\        | citations &\       | 594587       | GPT-4o            | running                           |
-| Extraction & Matching   | registries records |              |                   |                                   |
-+-------------------------+--------------------+--------------+-------------------+-----------------------------------+
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| Project                 | Data                      | Records    | Tool              | [Test]{style="color:darkorange;"} |
++=========================+===========================+============+===================+===================================+
+| Extending SRs           | citation set              | 7494\      | RF/SVM            | 0.934-0.999\                      |
+|                         |                           | (14 SR)    |                   | (AUC-ROC)                         |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| VZV detection           | Pediatrician\             | 60659      | RNN               | 0.953\                            |
+|                         | free-text notes           |            |                   | (AUC-ROC)                         |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| Otitis Classification   | Pediatrician\             | 297673     | RNN               | 0.955\                            |
+|                         | free-text notes           |            |                   | (Balance F1)                      |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| Injuries Classification | ED discharge\             | 8194       | GPT-4             | 99.5-1.0\                         |
+|                         | free-text notes           |            |                   | (Accuracy)                        |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| SR Screening            | citation set              | 3080       | Humans + ASReview | 0.96-0.98\                        |
+|                         |                           |            |                   | (AUC-ROC)                         |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| SR Screening            | citation set              | 24931      | GPT-4o            | fine-tuning                       |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| SR Screening            | citation set              | 535+       | GPT-4o            | developing                        |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
+| Classification,\        | citation & registries set | 594587     | GPT-4o            | running                           |
+| Extraction & Matching   |                           |            |                   |                                   |
++-------------------------+---------------------------+------------+-------------------+-----------------------------------+
 
-## Modern [Comparisons]{style="color:darkorange;"} of Text Analysis[^1]
+## [Comparisons]{style="color:darkorange;"} of Text Analysis[^1]
 
 [^1]: Treated-Control binary classification of RNA-seq experiments (ratio: 195/125 \~ 3/2)
 
@@ -112,7 +111,7 @@ nocite: |
 | SVM                             | fitted     | self-developed              | local       | 57.8                 |
 +---------------------------------+------------+-----------------------------+-------------+----------------------+
 
-## Modern [Reality]{style="color:darkorange;"} for Text Analysis
+## [Reality]{style="color:darkorange;"} for Text Analysis
 
 ![](img/genai-llm.jpg){fig-align="center" width="800"}
 
@@ -125,7 +124,7 @@ nocite: |
 
 ::: columns
 ::: {.column width="80%"}
-![](img/ubep_people.jpg) <small>Slides: [https://bit.ly/ai4a-text](https://bit.ly/ai4a-text)</small>
+![](img/ubep_people.jpg) <small>Slides: <https://bit.ly/ai4a-text></small>
 :::
 
 ::: {.column width="20%"}

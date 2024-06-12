@@ -1,8 +1,10 @@
 ---
 title: '[Text Analysis]{style="color:darkblue"}<br>for<br>[Clinical Research]{style="color:darkorange;"}'
-subtitle: '**Our current experiences at** [**UBEP**]{style="color:darkblue;"}'
+subtitle: '**Our current experiences at** [**UBEP**]{style="color:blue;"}'
+author: '**[IT]{style="color:green;"}[A]{style="color:white;border-color:black"}[LY]{style="color:red;"}/[UniPD]{style="color:darkred;"}/[D]{style="color:white;background-color:red"}[S]{style="color:blue;background-color:red"}[CTVPH]{style="color:white;background-color:red"}/[UBEP]{style="color:blue;"}/[LAIMS]{style="color:darkorange;"}/CorradoLanera[.]{style="color:darkorange;"}phd**'
 format:
   revealjs:
+    embed-resources: true
     width:  1648 #(3/2)
     height: 1080
     logo: img/UBEP.png
@@ -12,8 +14,6 @@ format:
     controls: true
     preview-links: auto
     code-link: true
-    chalkboard: 
-      src: src/chalkboard-presentation.json
 title-slide-attributes:
   data-background-image: img/ai4a-logo.jpg
   data-background-size: contain
@@ -48,89 +48,91 @@ nocite: |
 
 ## Modern [Applications]{style="color:darkorange;"} for Text Analysis
 
-::: columns
-::: {.column width="50%"}
 ### (L)LM
 
 ![](img/transformer_decoding_2.gif){fig-align="center"}
-:::
 
-::: {.column width="50%"}
-### ChatXYZ
-
-![](img/llm-prompt.png){fig-align="center"}
-:::
-:::
 
 ## Modern [Opportunities]{style="color:darkorange;"} for Text Analysis
 
 ![](img/LLM-use-cases.png){fig-align="center"}
 
-## Modern UBEP on Text Analysis
+## Modern [UBEP]{style="color:blue;"} on Text Analysis
 
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| Project                 | Data               | Records    | Tool             | [Test ]{style="color:darkorange;"} set |
-+=========================+====================+============+==================+========================================+
-| Costumer/Hutch          | citations          | 7494\      | RF/SVM           | AUC-ROC\                               |
-|                         |                    | (14 SR)    |                  | 0.934-0.999                            |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| VZV detection           | Pediatrician\      | 60659      | RNN              | AUC-ROC\                               |
-|                         | free-text notes    |            |                  | 0.953                                  |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| Otitis Classification   | Pediatrician\      | 297673     | RNN              | Balance F1\                            |
-|                         | free-text notes    |            |                  | 0.955                                  |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| Injuries Classification | ED discharge\      | 8194       | GPT-4            | Accuracy\                              |
-|                         | free-text notes    |            |                  | 99.5-1                                 |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| SR Screening            | citations          | 3080       | Human + ASReview | AUC-ROC\                               |
-|                         |                    |            |                  | 0.96-0.98                              |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| SR Screening            | citations          | 24931      | GPT-4o           | fine-tuning                            |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| SR Screening            | citations          | 535        | GPT-4o           | developing                             |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
-| Classification +\       | citations +\       | 594587     | GPT-4o           | running                                |
-| Information\            | registries records |            |                  |                                        |
-| Extraction & Matching   |                    |            |                  |                                        |
-+-------------------------+--------------------+------------+------------------+----------------------------------------+
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| Project                 | Data               | Records      | Tool              | [Test]{style="color:darkorange;"} |
++=========================+====================+==============+===================+===================================+
+| Extending SRs           | citations          | 7494 (14 SR) | RF/SVM            | 0.934-0.999\                      |
+|                         |                    |              |                   | (AUC-ROC)                         |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| VZV detection           | Pediatrician\      | 60659        | RNN               | 0.953\                            |
+|                         | free-text notes    |              |                   | (AUC-ROC)                         |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| Otitis Classification   | Pediatrician\      | 297673       | RNN               | 0.955\                            |
+|                         | free-text notes    |              |                   | (Balance F1)                      |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| Injuries Classification | ED discharge\      | 8194         | GPT-4             | 99.5-1.0\                         |
+|                         | free-text notes    |              |                   | (Accuracy)                        |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| SR Screening            | citations          | 3080         | Humans + ASReview | 0.96-0.98\                        |
+|                         |                    |              |                   | (AUC-ROC)                         |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| SR Screening            | citations          | 24931        | GPT-4o            | fine-tuning                       |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| SR Screening            | citations          | 535          | GPT-4o            | developing                        |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
+| Classification,\        | citations &\       | 594587       | GPT-4o            | running                           |
+| Extraction & Matching   | registries records |              |                   |                                   |
++-------------------------+--------------------+--------------+-------------------+-----------------------------------+
 
-## Modern [Comparisons]{style="color:darkorange;"} of Text Analysis
+## Modern [Comparisons]{style="color:darkorange;"} of Text Analysis[^1]
 
-Treated-Control binary classification (195/125 \~ 3/2)
+[^1]: Treated-Control binary classification (ratio: 195/125 \~ 3/2)
 
-+---------------+----------------------+
-| Model         | Overall Accuracy\    |
-|               | (n = 320)            |
-+===============+======================+
-| GPT-4o        | TBD                  |
-+---------------+----------------------+
-| GPT-3.5-turbo | TBD                  |
-+---------------+----------------------+
-| LLama3 70B    | 98.6 (97.6 balanced) |
-+---------------+----------------------+
-| LLama3 8B     | 92.2 (90.8 balanced) |
-+---------------+----------------------+
-| Gemma 1.1 7B  | 79.1 (75.7 balanced) |
-+---------------+----------------------+
-| RF            | 77.6                 |
-+---------------+----------------------+
-| GBM           | 62.8                 |
-+---------------+----------------------+
-| NB            | 60.6                 |
-+---------------+----------------------+
-| SVM           | 57.8                 |
-+---------------+----------------------+
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| Model                           | Type       | Access                      | Computation | Accuracy\            |
+|                                 |            |                             |             | (n = 320)            |
++:================================+:===========+:============================+:============+:=====================+
+| GPT-4o                          | pretrained | [payed]{style="color:red"}  | remote      | TBD                  |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| GPT-3.5-turbo                   | pretrained | [payed]{style="color:red"}  | remote      | TBD                  |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| LLama3 [70B]{style="color:red"} | pretrained | [free]{style="color:green"} | local       | 98.6 (97.6 balanced) |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| LLama3 8B                       | pretrained | [free]{style="color:green"} | local       | 92.2 (90.8 balanced) |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| Gemma 1.1 7B                    | pretrained | [free]{style="color:green"} | local       | 79.1 (75.7 balanced) |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| RF                              | fitted     | self-developed              | local       | 77.6                 |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| GBM                             | fitted     | self-developed              | local       | 62.8                 |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| NB                              | fitted     | self-developed              | local       | 60.6                 |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
+| SVM                             | fitted     | self-developed              | local       | 57.8                 |
++---------------------------------+------------+-----------------------------+-------------+----------------------+
 
 ## Modern [Reality]{style="color:darkorange;"} for Text Analysis
 
 ![](img/genai-llm.jpg){fig-align="center" width="800"}
 
-## Thank [you]{style="color:darkorange;"} for the attention
-
-![](img/ubep_people.jpg){fig-align="right"}
-
 ## References
 
 ::: {#refs}
+:::
+
+## Thank [you]{style="color:darkorange;"} for the attention
+
+::: columns
+::: {.column width="80%"}
+![](img/ubep_people.jpg) <small>Slides: [https://bit.ly/ai4a-text](https://bit.ly/ai4a-text)</small>
+:::
+
+::: {.column width="20%"}
+![](img/AI4Aslides.png){width="2000"}
+
+<br><br>
+
+![](img/LAIMSCorradoLanera.png)
+:::
 :::

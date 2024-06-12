@@ -87,7 +87,7 @@ nocite: |
 
 ## Modern [Comparisons]{style="color:darkorange;"} of Text Analysis[^1]
 
-[^1]: Treated-Control binary classification (ratio: 195/125 \~ 3/2)
+[^1]: Treated-Control binary classification of RNA-seq experiments (ratio: 195/125 \~ 3/2)
 
 +---------------------------------+------------+-----------------------------+-------------+----------------------+
 | Model                           | Type       | Access                      | Computation | Accuracy\            |

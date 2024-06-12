@@ -1,0 +1,136 @@
+---
+title: '[Text Analysis]{style="color:darkblue"}<br>for<br>[Clinical Research]{style="color:darkorange;"}'
+subtitle: '**Our current experiences at** [**UBEP**]{style="color:darkblue;"}'
+format:
+  revealjs:
+    width:  1648 #(3/2)
+    height: 1080
+    logo: img/UBEP.png
+    footer: '[A]{style="color:darkorange;"}rtificial [I]{style="color:darkorange;"}ntelligence [for]{style="color:darkblue;"} [Africa]{style="color:darkorange;"}<br>Shaping global health perspective from research and medicine in Africa'
+    slide-number: true
+    history: false
+    controls: true
+    preview-links: auto
+    code-link: true
+    chalkboard: 
+      src: src/chalkboard-presentation.json
+title-slide-attributes:
+  data-background-image: img/ai4a-logo.jpg
+  data-background-size: contain
+  data-background-repeat: no-repeat
+  data-background-position: center
+  data-background-opacity: "0.4"
+
+bibliography: references.bib
+nocite: |
+  @*
+---
+
+## Modern [Tools]{style="color:darkorange;"} for Text Analysis
+
+::: columns
+::: {.column width="50%"}
+### Neural Network
+
+![](img/mlp.png){fig-align="center"}
+
+### RNN
+
+![](img/sequences.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+### Transformer
+
+![](img/full_transformer.png){fig-align="center"}
+:::
+:::
+
+## Modern [Applications]{style="color:darkorange;"} for Text Analysis
+
+::: columns
+::: {.column width="50%"}
+### (L)LM
+
+![](img/transformer_decoding_2.gif){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+### ChatXYZ
+
+![](img/llm-prompt.png){fig-align="center"}
+:::
+:::
+
+## Modern [Opportunities]{style="color:darkorange;"} for Text Analysis
+
+![](img/LLM-use-cases.png){fig-align="center"}
+
+## Modern UBEP on Text Analysis
+
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| Project                 | Data               | Records    | Tool             | [Test ]{style="color:darkorange;"} set |
++=========================+====================+============+==================+========================================+
+| Costumer/Hutch          | citations          | 7494\      | RF/SVM           | AUC-ROC\                               |
+|                         |                    | (14 SR)    |                  | 0.934-0.999                            |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| VZV detection           | Pediatrician\      | 60659      | RNN              | AUC-ROC\                               |
+|                         | free-text notes    |            |                  | 0.953                                  |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| Otitis Classification   | Pediatrician\      | 297673     | RNN              | Balance F1\                            |
+|                         | free-text notes    |            |                  | 0.955                                  |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| Injuries Classification | ED discharge\      | 8194       | GPT-4            | Accuracy\                              |
+|                         | free-text notes    |            |                  | 99.5-1                                 |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| SR Screening            | citations          | 3080       | Human + ASReview | AUC-ROC\                               |
+|                         |                    |            |                  | 0.96-0.98                              |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| SR Screening            | citations          | 24931      | GPT-4o           | fine-tuning                            |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| SR Screening            | citations          | 535        | GPT-4o           | developing                             |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+| Classification +\       | citations +\       | 594587     | GPT-4o           | running                                |
+| Information\            | registries records |            |                  |                                        |
+| Extraction & Matching   |                    |            |                  |                                        |
++-------------------------+--------------------+------------+------------------+----------------------------------------+
+
+## Modern [Comparisons]{style="color:darkorange;"} of Text Analysis
+
+Treated-Control binary classification (195/125 \~ 3/2)
+
++---------------+----------------------+
+| Model         | Overall Accuracy\    |
+|               | (n = 320)            |
++===============+======================+
+| GPT-4o        | TBD                  |
++---------------+----------------------+
+| GPT-3.5-turbo | TBD                  |
++---------------+----------------------+
+| LLama3 70B    | 98.6 (97.6 balanced) |
++---------------+----------------------+
+| LLama3 8B     | 92.2 (90.8 balanced) |
++---------------+----------------------+
+| Gemma 1.1 7B  | 79.1 (75.7 balanced) |
++---------------+----------------------+
+| RF            | 77.6                 |
++---------------+----------------------+
+| GBM           | 62.8                 |
++---------------+----------------------+
+| NB            | 60.6                 |
++---------------+----------------------+
+| SVM           | 57.8                 |
++---------------+----------------------+
+
+## Modern [Reality]{style="color:darkorange;"} for Text Analysis
+
+![](img/genai-llm.jpg){fig-align="center" width="800"}
+
+## Thank [you]{style="color:darkorange;"} for the attention
+
+![](img/ubep_people.jpg){fig-align="right"}
+
+## References
+
+::: {#refs}
+:::
